@@ -1,22 +1,18 @@
 import React, { Component } from 'react'
 import { ScrollView } from 'react-native'
 import axios from 'axios'
-import ArticleList from './ArticleList'
+import ArticleDetail from './ArticleDetail'
 
 class ArticleList extends Component {
-    state = {
-        articles: []
-    } // initializing state
+    state = { articles: [] } // initializing state
     componentWillMount() {
-        axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-            .then(response => this.setState({
-                albums: response.data
-            }))
+        axios.get('')
+            .then(response => this.setState({articles: response.data}))
     }
 
     renderArticles() {
-        return this.state.albums.map(album =>
-            <ArticleDetail key = { album.title } album = {album}/>)
+        return this.state.articles.map(article =>
+            <ArticleDetail key = { article.title } article = {article}/>)
         }
 
         render() {
@@ -28,6 +24,6 @@ class ArticleList extends Component {
                 </ScrollView>
             )
         }
-    }
+}
 
-    export default ArticleList
+ export default ArticleList

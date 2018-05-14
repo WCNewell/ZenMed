@@ -4,7 +4,7 @@ import Card from './Card'
 import CardSection from './CardSection'
 import Button from './Button'
 
-const AlbumDetail = ({ album }) => {
+const ArticleDetail = ({ album }) => {
     const { title, artist, thumbnail_image, image, url } = album
     const {
         thumbnailStyle,
@@ -26,8 +26,8 @@ const AlbumDetail = ({ album }) => {
                 <View>
                     <Text style = {headerTextStyle}>{title}</Text>
                     <Text>{artist}</Text>
-                    </View>
-                    </CardSection>
+                </View>
+            </CardSection>
 
             <CardSection>
                 <Image
@@ -70,4 +70,4 @@ const styles = {
     }
 }
 
-export default AlbumDetail
+export default ArticleDetail
