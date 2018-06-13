@@ -1,34 +1,103 @@
-import React, {  Component } from 'react'
-import axios from 'axios'
-import { Flatlist, ActivityIndicator, Text, View, Image, Linking } from 'react-native'
-import Card from './Card'
-import CardSection from './CardSection'
-import Button from './Button'
+import React from 'react'
+// import axios from 'axios'
+import { View, Text } from 'react-native'
+// import Card from './Card'
+// import CardSection from './CardSection'
+// import Button from './Button'
 
-class DailyQuote extends Component {
-    state = { quote } // initializing state
-    componentWillMount() {
-        axios.get('https://quotes.rest/quote/random.json?api_key=WYIvXbe1f6_RzkfkFPNy6AeF')
-            .then(response => this.setState({ quote: response.data }))
-    }
-
-    renderQuote() {
-        return this.state(quote =>
-        <CardSection quote={quote} />)
-    }
-
-    render () {
-        console.log(this.state)
-
-        return (
-            <View>
-                {this.renderQuote()}
-            </View>
-        )
-    }
+const Quote = () => {
+    return (
+        <View>
+            <Text>The Quote!!!</Text>
+        </View>
+    )
 }
 
 export default DailyQuote
+
+
+// class DailyQuote extends Component {
+//     state = { quote: '' }
+//     componentWillMount() {
+//         axios.get('https://quotes.rest/quote/random.json?api_key=WYIvXbe1f6_RzkfkFPNy6AeF')
+//             .then(response => this.setState({ quote: response.quote }))
+//     }
+
+//     renderQuote() {
+//         return this.state.quote(quote =>
+//             <CardSection quote={quote}></CardSection>)
+//     }
+
+//     render () {
+//         console.log(this.state)
+
+//         return (
+//             <View>
+//                 {this.renderQuote()}
+//             </View>
+//         )
+//     }
+// }
+
+
+// class DailyQuote extends Component {
+//     state = { quote: [] } // initializing state
+//     componentWillMount() {
+//         const url = 'http://quotes.rest/quote/random'
+//         fetch (url)
+//             .then((response) => response.json())
+//             .then(result => this.setState({quote: response.data}))
+//             console.log(response.data)
+//     }
+
+//     renderQuote() {
+//         return this.state.quotes.map(quote =>
+//             <CardSection key = { quote.title } quote = {quote}/>)
+//         }
+
+//         render() {
+//             console.log(this.state)
+
+//             return (
+//                 <View>
+//                     {this.renderQuote()}
+//                 </View>
+//             )
+//         }
+// }
+
+// class DailyQuote extends Component {
+//     constructor(props) {
+//         super(props)
+
+//         this.state = {
+//             quote: '',
+//         }
+//     }
+
+//     componentDidMount() {
+//         fetch('https://quotes.rest/quote/random.json?api_key=WYIvXbe1f6_RzkfkFPNy6AeF')
+//             .then(response => response.json())
+//             .then(data => this.setState({ quote: data.quote }))
+//     }
+
+//     renderQuote() {
+//         return this.state(quote =>
+//         <CardSection quote={quote} />)
+//     }
+
+//     render () {
+//         console.log(this.state)
+
+//         return (
+//             <View>
+//                 {this.renderQuote()}
+//             </View>
+//         )
+//     }
+// }
+
+// export default DailyQuote
 
 // export default class DailyQuote extends React.Component {
 
@@ -76,32 +145,6 @@ export default DailyQuote
 //       </View>
 //     )
 //   }
-// }
-
-// class DailyQuote extends Component {
-//     state = { quote: [] } // initializing state
-//     componentWillMount() {
-//         const url = 'http://quotes.rest/quote/random'
-//         fetch (url)
-//             .then((response) => response.json())
-//             .then(result => this.setState({quote: response.data}))
-//             console.log(response.data)
-//     }
-
-//     renderQuote() {
-//         return this.state.quotes.map(quote =>
-//             <CardSection key = { quote.title } quote = {quote}/>)
-//         }
-
-//         render() {
-//             console.log(this.state)
-
-//             return (
-//                 <View>
-//                     {this.renderQuote()}
-//                 </View>
-//             )
-//         }
 // }
 
 // const AlbumDetail = ({ album }) => {

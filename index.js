@@ -1,13 +1,13 @@
 import React from 'react'
 import { AppRegistry, View} from 'react-native';
 import Header from './src/components/Header'
-import ArticleList from './src/components/ArticleList'
+import DailyQuote from './src/components/DailyQuote'
 
 const App = () => (
     <View style= {{ flex: 1 }}>
         <Header headerText={'ZenMed'}/>
-        <ArticleList />
+        <DailyQuote />
     </View>
 )
 
-AppRegistry.registerComponent('ZenMed', () => App);
+AppRegistry.registerComponent('ZenMed', () => App)

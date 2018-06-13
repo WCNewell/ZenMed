@@ -4,7 +4,7 @@
 // import CardSection from './CardSection'
 // import Button from './Button'
 
-// const ArticleDetail = ({ album }) => {
+// const ArticleDetail = ({ article }) => {
 //     const { title, artist, thumbnail_image, image, url } = album
 //     const {
 //         thumbnailStyle,
